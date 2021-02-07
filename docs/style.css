@@ -127,6 +127,7 @@ hr{
   position: absolute;
   bottom:5px;
   right: 45px;
+  font-weight: 900;
 }
 
 .rpm{
@@ -164,22 +165,35 @@ hr{
 }
 
 #data_speedH{
-  font-size: 100px;
+  font-size: 125px;
   position: absolute;
   bottom:30px;
   right: 50px;
+  font-weight: 900;
 }
 #data_speedL{
-  font-size: 40px;
+  font-size: 50px;
   position: absolute;
-  bottom:42px;
-  right: 5px;
+  bottom:46px;
+  right: 2px;
+  font-weight: 900;
 }
 #unit_speed{
   font-size: 30px;
   position: absolute;
   bottom:5px;
   right: 5px;
+}
+
+#time{
+  font-size: 35px;
+  position: absolute;
+  bottom:0px;
+  left: 0px;
+  padding: 0px 5px 1px 5px;
+  border-width: 4px 4px 0 0;
+  border-color: #333;
+  border-style: solid;
 }
 
 .data{

@@ -33,16 +33,17 @@
         </dvi>
       </dvi>
 
-      <dvi class="speed">
+      <dvi class="speed" onclick="ble.startNotify('UUID1')">
         <div id="data_speedH">XX</div>
         <div id="data_speedL">.X</div>
+        <div id="time">00:00</div>
         <div id="unit_speed">[km/h]</div>
       </dvi>
       <br>
 
       <dvi class="data">
-        温度:<div id="data_temp">xxx</div>℃
-        バッテリー:<div id="data_batt">xxx</div>V
+        <div id="data_temp">xxx</div>℃ 
+        <div id="data_batt">xxx</div>V 
         GNSS:<div id="data_mode">x</div>
       </dvi>
       
