@@ -16,12 +16,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 html, body {
-	height: 100%;
-	width: 100%;
 	font-family: 'Lato', Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 	min-width: 400px;
-	position: relative;
-  background-color: #ffffff;
+  background-color: #000;
 }
 
 hr{
@@ -32,12 +29,10 @@ hr{
 }
 
 .container{
-  margin: auto;
   width: 100%;
   max-width: 420px;
   background-color: #333;
   color: #ffffff;
-  position: relative;
 }
 
 .title{
@@ -110,12 +105,35 @@ hr{
   font-weight: 300;
 }
 
-.rpm{
+.meter{
   float: left;
   width: 130px;
-  height: 100px;
+  border-width: 0px;
+  border-color: #fff;
+  border-style: solid;
+  position: relative;
+}
+
+.shift{
+  display: inline-block;
+  width: 130px;
+  height: 80px;
   background-color: #111;
-  margin: 5px 5px 5px 5px;
+  position: relative;
+}
+
+#data_shift{
+  font-size: 60px;
+  position: absolute;
+  bottom:5px;
+  right: 45px;
+}
+
+.rpm{
+  display: inline-block;
+  width: 130px;
+  height: 80px;
+  background-color: #111;
   padding-right: 0;
   padding-bottom: 0;
   position: relative;
@@ -135,49 +153,42 @@ hr{
   right: 5px;
 }
 
-.shift{
-  float: left;
-  width: 60px;
-  height: 100px;
-  background-color: #111;
-  margin: 5px 5px 5px 5px;
-  position: relative;
-}
-
-#data_shift{
-  font-size: 60px;
-  position: absolute;
-  bottom:17px;
-  right: 10px;
-}
-
 .speed{
   float: left;
-  width: 150px;
-  height: 100px;
+  width: 240px;
+  height: 163px;
+  margin-left: 5px;
   text-align: right;
   background-color: #111;
-  margin: 5px 5px 5px 5px;
-  position: relative;
+  position: absolute;
 }
 
 #data_speedH{
-  font-size: 60px;
+  font-size: 100px;
   position: absolute;
-  bottom:20px;
-  right: 45px;
+  bottom:30px;
+  right: 50px;
 }
 #data_speedL{
   font-size: 40px;
   position: absolute;
-  bottom:25px;
+  bottom:42px;
   right: 5px;
 }
 #unit_speed{
-  font-size: 15px;
+  font-size: 30px;
   position: absolute;
   bottom:5px;
   right: 5px;
+}
+
+.data{
+  display: inline-block;
+  width: 380px;
+  height: 25px;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
 }
 
 #data_temp{
