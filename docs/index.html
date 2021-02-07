@@ -1,32 +1,52 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>CubBleMonitor</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="bluejelly.js"></script>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cub Ble Monitor</title>
+  <meta name="viewport" content="width=400,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="bluejelly.js"></script>
+</head>
 
 <body>
-<div class="container">
-    <div class="contents margin">        
-        <div id="data_rpm">xxx[rpm]</div>
-        <div id="data_shift">x</div>
-        <div id="data_temp">xxx[℃]</div>
-        <div id="data_batt">xxx[V]</div>
-        <div id="data_speed">xxx[km/h]</div>
-        <div id="data_mode">x</div>
-        <hr>
+  <div class="container">
+    <div class="contents margin">
 
-        <button id="startNotifications" class="button">Start Notify</button>
-        <button id="stopNotifications" class="button">Stop Notify</button>
-        <hr>
-        
-        <div id="device_name">a</div>
-        <div id="uuid_name">a</div>
-        <div id="status">a</div>
+      <button id="startNotifications" class="button">Start Notify</button>
+      <button id="stopNotifications" class="button">Stop Notify</button>
+      <div id="info">
+        <div id="device_name">device_name</div>
+        <div id="uuid_name">uuid_name</div>
+      </div>
+
+      <hr>
+      <dvi class="rpm">
+        <div id="data_rpm">XXXX</div>
+        <div id="unit_rpm">[rpm]</div>
+      </dvi>
+    
+      <dvi class="shift">
+        <div id="data_shift">X</div>
+      </dvi>
+    
+      <dvi class="speed">
+        <div id="data_speedH">XX</div>
+        <div id="data_speedL">.X</div>
+        <div id="unit_speed">[km/h]</div>
+      </dvi>
+      
+      <br>
+      
+      　温度<div id="data_temp">xxx<div>℃
+      　バッテリー<div id="data_batt">xxx</div>V
+      　GNSS　<div id="data_mode">x</div>
+
+      <hr>
+      <div id="status">a</div>
     </div>
-</div>
-<script type="text/javascript" src="BLE.js"></script>
+  </div>
+  <script type="text/javascript" src="BLE.js"></script>
 </body>
+
 </html>

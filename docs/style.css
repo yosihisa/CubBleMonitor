@@ -19,27 +19,27 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-	min-width: 640px;
+	min-width: 400px;
 	position: relative;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 hr{
   border-width: 1px;
   border-color: #fff;
   border-style: solid;
-  margin: 20px 0px 20px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 .container{
   margin: auto;
   width: 100%;
-  min-height: 100%;
-  max-width: 640px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-  background-color: #f0f0f0;
+  max-width: 420px;
+  background-color: #333;
+  color: #ffffff;
   position: relative;
 }
+
 .title{
   width: 100%;
   background-color: #fff;
@@ -47,21 +47,12 @@ hr{
 }
 
 .contents{
-  padding: 25px 0px 100px 0px;
-}
-
-.footer{
-  width: 100%;
-  font-size:12px;
-  position: absolute;
-  bottom: 0px;
-  height: 60px;
-  color: #9a9a9a;
+  padding: 10px 0px 100px 0px;
 }
 
 .margin{
-  border-left:  70px;
-  border-right: 70px;
+  border-left:  20px;
+  border-right: 20px;
   border-style: solid;
   box-sizing: border-box;
   border-color: rgba(0, 0, 0, 0);
@@ -69,37 +60,22 @@ hr{
 
 .button{
   border-width: 1px;
-  border-color: #e6e6e6;
+  border-color: #000;
   border-style: solid;
-  background-color: #fff;
-  padding: 5px 20px 5px 20px;
-  color: #4d4d4d;
-  font-size: 14px;
+  background-color: #555;
+  width: 100px;
+  height: 80px;
+  color: #fff;
+  font-size: 20px;
   font-weight: 300;
   margin: 0px;
 }
+
 .button:hover{
-  border-color: #ccc;
+  border-color: #888;
 }
 .button:active{
-  background-color: #f0f0f0;
-}
-
-#chart{
-	margin-bottom: 20px;
-}
-
-#title{
-  color:#ff8319;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 2em;
-}
-
-#subtitle{
-  color:#808080;
-  font-size: 15px;
-  font-weight: 300;
+  background-color: #888;
 }
 
 #data_text, #data_text2{
@@ -109,25 +85,110 @@ hr{
   line-height: 1.5em;
 }
 
-#device_name, #device_name2{
-  color:#ff8319;
+#info{
+  float :right;
+  width: 150px;
+  height: 60px;
+  margin: 5px 0 10px 0 ;
+}
+#device_name{
   font-size:18px;
   font-weight: 300;
   line-height: 1.5em;
+  margin: 5px 0 5px 0;
 }
 
-#uuid_name, #uuid_name2{
-  color:#ff8319;
-	font-size:14px;
+#uuid_name{
+	font-size:18px;
   font-weight: 300;
+  margin: 5px 0 5px 0;
 }
 
-#status, #status2{
+#status{
 	color:#448aff;
 	font-size:14px;
   font-weight: 300;
 }
 
+.rpm{
+  float: left;
+  width: 130px;
+  height: 100px;
+  background-color: #111;
+  margin: 5px 5px 5px 5px;
+  padding-right: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+#data_rpm{
+  font-size: 40px;
+  position: absolute;
+  bottom:25px;
+  right: 10px;
+}
+
+#unit_rpm{
+  font-size: 15px;
+  position: absolute;
+  bottom:5px;
+  right: 5px;
+}
+
+.shift{
+  float: left;
+  width: 60px;
+  height: 100px;
+  background-color: #111;
+  margin: 5px 5px 5px 5px;
+  position: relative;
+}
+
+#data_shift{
+  font-size: 60px;
+  position: absolute;
+  bottom:17px;
+  right: 10px;
+}
+
+.speed{
+  float: left;
+  width: 150px;
+  height: 100px;
+  text-align: right;
+  background-color: #111;
+  margin: 5px 5px 5px 5px;
+  position: relative;
+}
+
+#data_speedH{
+  font-size: 60px;
+  position: absolute;
+  bottom:20px;
+  right: 45px;
+}
+#data_speedL{
+  font-size: 40px;
+  position: absolute;
+  bottom:25px;
+  right: 5px;
+}
+#unit_speed{
+  font-size: 15px;
+  position: absolute;
+  bottom:5px;
+  right: 5px;
+}
+
+#data_temp{
+  display: inline;
+}
+#data_batt{
+  display: inline;
+}
+#data_mode{
+  display: inline;
+}
 
 
 a { text-decoration: none; }

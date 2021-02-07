@@ -46,8 +46,10 @@ ble.onRead = function (data, uuid) {
     speed = data.getInt16(5);
     mode  = data.getInt8(7);
 
+    rpm = rpm * 10;
     batt = batt / 10;
-    speed = speed / 10;
+    speedH = speed / 10;
+    speedL = speed % 10;
     if (shift == 0) shift = 'N';
     if (mode == 78) mode = "N";
     if (mode == 65) mode = "A";
@@ -57,11 +59,12 @@ ble.onRead = function (data, uuid) {
 
     //HTMLにデータを表示
 
-    document.getElementById('data_rpm').innerHTML = rpm + '[rpm]';
+    document.getElementById('data_rpm').innerHTML = rpm;
     document.getElementById('data_shift').innerHTML = shift;
-    document.getElementById('data_temp').innerHTML = temp + '[℃]';
-    document.getElementById('data_batt').innerHTML = batt.toFixed(1) + '[V]';
-    document.getElementById('data_speed').innerHTML = speed.toFixed(1) + '[km/h]';
+    document.getElementById('data_temp').innerHTML = temp;
+    document.getElementById('data_batt').innerHTML = batt.toFixed(1);
+    document.getElementById('data_speedH').innerHTML = speedH.toFixed(0);
+    document.getElementById('data_speedL').innerHTML = '.' + speedL;
     document.getElementById('data_mode').innerHTML = mode;
 
 
