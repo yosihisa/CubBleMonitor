@@ -1,3 +1,17 @@
+//時計
+setInterval('showClock1()', 1000);
+
+function showClock1() {
+    var nowTime = new Date();
+    var nowHour = nowTime.getHours();
+    var nowMin = nowTime.getMinutes();
+    document.getElementById("timeH").innerHTML = ("00" + nowHour).slice(-2);
+    document.getElementById("timeM").innerHTML = ("00" + nowMin).slice(-2);
+
+}
+
+var count = 0;
+
 //--------------------------------------------------
 //Global変数
 //--------------------------------------------------
@@ -57,13 +71,8 @@ ble.onRead = function (data, uuid) {
     if (mode == 68) mode = "D";
     if (mode == 69) mode = "E";
 
+    count ++;
 
-    var nowTime = new Date();
-    var Hour = nowTime.getHours();
-    var Min = nowTime.getMinutes();
-
-    //コンソールに値を表示
-    //console.log(value);
 
     //HTMLにデータを表示
     document.getElementById('data_rpm').innerHTML = rpm;
@@ -73,8 +82,6 @@ ble.onRead = function (data, uuid) {
     document.getElementById('data_speedH').innerHTML = speedH.toFixed(0);
     document.getElementById('data_speedL').innerHTML = '.' + speedL;
     document.getElementById('data_mode').innerHTML = mode;
-
-    document.getElementById("time").innerHTML = ("00" + Hour).slice(-2) +`:`+ ("00" + Min).slice(-2) ;
 
     document.getElementById('uuid_name').innerHTML = uuid;
     document.getElementById('status').innerHTML = "read data"
@@ -96,6 +103,10 @@ ble.onRead = function (data, uuid) {
     else if (rpm < 7500) document.getElementById('data_rpm').style.color = "#0FF";
     else if (rpm < 8400) document.getElementById('data_rpm').style.color = "#FF0";
     else document.getElementById('data_rpm').style.color = "#F00";
+
+    if (count % 10 < 5) document.getElementById('timeS').style.color = "#FFF";
+    else document.getElementById('timeS').style.color = "#000";
+
 
 }
 
