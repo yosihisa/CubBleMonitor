@@ -107,17 +107,20 @@ ble.onRead = function (data, uuid) {
     if (count % 10 < 5) document.getElementById('timeS').style.color = "#FFF";
     else document.getElementById('timeS').style.color = "#000";
 
-    if (speed < 185) document.getElementById('speed').style.color = "#FFF";
-    else if (speed < 275) document.getElementById('speed').style.color = "#0F0";
-    else if (speed < 345) document.getElementById('speed').style.color = "#FF8";
-    else if (speed < 455) document.getElementById('speed').style.color = "#F8F";
-    else if (speed < 545) document.getElementById('speed').style.color = "#FF0";
-    else if (speed < 575) document.getElementById('speed').style.color = "#00F";
-    else if (speed < 590) document.getElementById('speed').style.color = "#0FF";
-    else if (speed < 610) document.getElementById('speed').style.color = "#FFF";
-    else if (speed < 630) document.getElementById('speed').style.color = "#0FF";
-    else if (speed < 720) document.getElementById('speed').style.color = "#F0F";
-    else if (speed < 999) document.getElementById('speed').style.color = "#F00";
+    if (speed < 575) {
+        document.getElementById('speed').style.color = "#FFF";
+        document.getElementById('speed').style.backgroundColor = "#111";
+    } else if (speed < 625) {
+        document.getElementById('speed').style.color = "#000";
+        document.getElementById('speed').style.backgroundColor = "#FFF";
+    } else if (speed < 725) {
+        document.getElementById('speed').style.color = "#000";
+        document.getElementById('speed').style.backgroundColor = "#FF3";
+    } else {
+        document.getElementById('speed').style.color = "#FFF";
+        document.getElementById('speed').style.backgroundColor = "#F00";
+    }
+
 
 }
 
