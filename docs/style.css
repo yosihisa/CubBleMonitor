@@ -163,7 +163,7 @@ hr{
   background-color: #111;
   position: absolute;
   color: #888;
-
+  text-shadow: 1px 2px 5px #808080;
 }
 
 #data_speedH{

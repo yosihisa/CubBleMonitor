@@ -71,7 +71,7 @@ ble.onRead = function (data, uuid) {
     if (mode == 68) mode = "D";
     if (mode == 69) mode = "E";
 
-    count ++;
+    count = count + 1;
 
 
     //HTMLにデータを表示
@@ -107,18 +107,36 @@ ble.onRead = function (data, uuid) {
     if (count % 10 < 5) document.getElementById('timeS').style.color = "#FFF";
     else document.getElementById('timeS').style.color = "#000";
 
-    if (speed < 575) {
+    if (speed < 450) {
         document.getElementById('speed').style.color = "#FFF";
         document.getElementById('speed').style.backgroundColor = "#111";
-    } else if (speed < 625) {
-        document.getElementById('speed').style.color = "#000";
-        document.getElementById('speed').style.backgroundColor = "#FFF";
-    } else if (speed < 725) {
-        document.getElementById('speed').style.color = "#000";
-        document.getElementById('speed').style.backgroundColor = "#FF3";
-    } else {
+    } else if (speed < 575) {
         document.getElementById('speed').style.color = "#FFF";
-        document.getElementById('speed').style.backgroundColor = "#F00";
+        document.getElementById('speed').style.backgroundColor = "#02D";
+    } else if (speed < 625) {
+        if (count % 8 < 4) {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#0F2";
+        } else {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#111";
+        }
+    } else if (speed < 725) {
+        if (count % 4 < 2) {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#F80";
+        } else {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#111";
+        }
+    } else {
+        if (count % 2 < 1) {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#F00";
+        } else {
+            document.getElementById('speed').style.color = "#FFF";
+            document.getElementById('speed').style.backgroundColor = "#111";
+        }
     }
 
 
