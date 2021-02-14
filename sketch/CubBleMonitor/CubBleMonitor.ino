@@ -94,10 +94,11 @@ void setup() {
 
 void loop() {
 
-  rpm = (rpm + 1) % 800;
-  shift = (shift + 1) % 5;
-  temp = (temp + 1) % 100;
-  batt = (batt + 1) % 155;
+  rpm = 0;
+  shift = 8;
+  batt = 148;
+  //speed = (speed + 1) % 750;
+  temp = temperatureRead() +20;
 
   //GNSS取得
   String cmds[15] = {"\0"};
@@ -107,9 +108,9 @@ void loop() {
     speed = cmds[7].toFloat() * 10;                //速度を取り出し
     mode  = cmds[9].charAt(0);                     //取得状況を取り出し
   }
-
   //BLE送信
-  if (deviceConnected) {
+  if (deviceConnected)
+  {
     uint8_t BLE_tx_buff[8] = {0};
     
     BLE_tx_buff[0] = (uint8_t)(rpm >> 8);
