@@ -11,6 +11,7 @@ function showClock1() {
 }
 
 var count = 0;
+var connected = 0;
 
 //--------------------------------------------------
 //Global変数
@@ -24,7 +25,6 @@ const ble = new BlueJelly();
 window.onload = function () {
     //UUIDの設定
     ble.setUUID("UUID1", "90af54ef-d367-41ec-ac04-b3f9f42cdcb2", "a018d2c9-5838-4196-bd97-d00547de2c57");
-    ble.startNotify('UUID1');
 }
 
 
@@ -178,6 +178,7 @@ ble.onDisconnect = function () {
     console.log('> Disconnect');
     document.getElementById('uuid_name').innerHTML = "Not Connected";
     document.getElementById('status').innerHTML = "disconnected";
+    connected = 0;
 }
 
 //--------------------------------------------------
@@ -190,8 +191,19 @@ ble.onError = function (error) {
 //-------------------------------------------------
 //ボタンが押された時のイベント登録
 //--------------------------------------------------
+
+function connectBLE() {
+    if (connected == 0) {
+        ble.startNotify('UUID1');
+        connected = 1;
+    }
+}
+
 document.getElementById('startNotifications').addEventListener('click', function () {
-    ble.startNotify('UUID1');
+    if (connected == 0) {
+        setInterval(connectBLE, 500);
+    }
+    //ble.startNotify('UUID1');
 });
 
 document.getElementById('stopNotifications').addEventListener('click', function () {
