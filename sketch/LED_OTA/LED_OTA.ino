@@ -18,6 +18,8 @@ const char *password = "ESP32ESP32";
 #define LED_G_CHANNEL 1
 #define LED_B_CHANNEL 2
 
+int cnt;
+
 void setup()
 {
     delay(1000);
