@@ -60,7 +60,7 @@ ble.onRead = function (data, uuid) {
     speed = data.getInt16(5);
     mode  = data.getInt8(7);
 
-    rpm = rpm * 10;
+    rpm = rpm ;
     batt = batt / 10;
     temp = temp - 20;
     speedH = speed / 10;
