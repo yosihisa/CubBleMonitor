@@ -73,9 +73,12 @@ int cnt;
 
 void IRAM_ATTR rpm_pulse() {
   uint64_t now_time = esp_timer_get_time();
-  ignition_cycle[ignition_num] = now_time - timeCounter;
-  ignition_num = (ignition_num + 1) % SMOOTHING;
-  timeCounter = now_time;
+  uint64_t dt = now_time - timeCounter;
+  if(dt > 12000){
+    ignition_cycle[ignition_num] = dt;
+    ignition_num = (ignition_num + 1) % SMOOTHING;
+    timeCounter = now_time;
+  }
   return;
 }
 
@@ -110,7 +113,7 @@ void setup() {
   }
 
   if (ota_mode != true){
-    attachInterrupt(RPM_PIN, rpm_pulse, RISING);
+    attachInterrupt(RPM_PIN, rpm_pulse, FALLING);
   }
   led_rgb(0, 0, 0);
 }
