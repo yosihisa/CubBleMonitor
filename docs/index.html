@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=400,initial-scale=1.4,minimum-scale=0.5,maximum-scale=2.0">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="bluejelly.js"></script>
+  <script type="text/javascript" src="display.js"></script>
+
 </head>
 
 <body>
@@ -17,47 +19,19 @@
       <!--
       <button id="stopNotifications" class="button">Stop Notify</button> 
       -->
+
       <div id="info">
         <div id="device_name">device_name</div>
         <div id="uuid_name">uuid_name</div>
       </div>
 
       <hr>
-
-      <dvi class="meter">
-        <dvi class="shift">
-          <div id="data_shift">X</div>
-        </dvi>
-        <br>
-        <dvi class="rpm">
-          <div id="data_rpm">XXXX</div>
-          <div id="unit_rpm">rpm</div>
-        </dvi>
-      </dvi>
-
-      <dvi id="speed" >
-        <div id="data_speedH">XX</div>
-        <div id="data_speedL">.X</div>
-        <div class="time">
-          <div id="timeH">00</div>
-          <div id="timeS">:</div>
-          <div id="timeM">00</div>
-        </div>
-        <div id="unit_speed">km/h</div>
-      </dvi>
-      <br>
-
-      <dvi class="data">
-        <div id="data_temp">xxx</div>℃ 
-        <div id="data_batt">xxx</div>V 
-        GNSS:<div id="data_mode">x</div>
-      </dvi>
-      
-      <br>
+      <canvas id="canvas" width="380" height="200"></canvas>
       <hr>
       <div id="status">a</div>
     </div>
   </div>
+  <script type="text/javascript">Start_drawing();</script>
   <script type="text/javascript" src="BLE.js"></script>
 </body>
 
