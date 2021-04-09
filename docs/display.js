@@ -152,20 +152,20 @@ function ndraw() {
     cv.fillText('GNSS', 275, 190, 50);
 
     cv.textAlign = 'start'
-    if (Mode = 'N') {
+    if (Mode == 'N') {
         cv.fillStyle = "#F00"
         cv.fillText('×', 330, 190);
-    } else if (Mode = 'E') {
+    } else if (Mode == 'E') {
         cv.fillStyle = "#FF0"
         cv.fillText('△', 330, 190);
-    } else if (Mode = 'A') {
+    } else if (Mode == 'A') {
         cv.fillStyle = "#0F0"
         cv.fillText('〇', 330, 190);
-    } else if (Mode = 'N') {
+    } else if (Mode == 'D') {
         cv.fillStyle = "#0F0"
         cv.fillText('◎', 330, 190);
     } else {
-        cv.fillStyle = "#0F0"
+        cv.fillStyle = "#FFF"
         cv.fillText(Mode, 330, 190, 30);
     }
     
