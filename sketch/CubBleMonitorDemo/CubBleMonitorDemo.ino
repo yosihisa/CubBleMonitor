@@ -70,10 +70,10 @@ void setup() {
 
 void loop() {
 
-  rpm = (rpm + 10) % 9500;
-  shift = shift + 1;
+  rpm = (rpm + 20) % 9500;
+  shift = (shift + 1) % 5;
   batt = (batt + 1) % 160;
-  speed = (speed + 2) % 800;
+  speed = (speed + 5) % 800;
   temp = temperatureRead() + 20;
 
   //BLE送信
