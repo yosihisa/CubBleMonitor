@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*************************** RESET ***************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/*************************** RESET ***************************/
+
+
+html, body {
+	font-family: 'Lato', Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	min-width: 400px;
+  background-color: #000;
+}
+
+hr{
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+  margin: 15px 0px 15px 0px;
+}
+
+.container{
+  width: 100%;
+  max-width: 420px;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.title{
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0px 20px 0px;
+}
+
+.contents{
+  padding: 10px 0px 100px 0px;
+}
+
+.margin{
+  border-left:  20px;
+  border-right: 20px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.button{
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  background-color: #555;
+  width: 100px;
+  height: 80px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.button:hover{
+  border-color: #888;
+}
+.button:active{
+  background-color: #888;
+}
+
+#data_text, #data_text2{
+  color:#448aff;
+  font-size:72px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+#info{
+  float :right;
+  width: 150px;
+  height: 60px;
+  margin: 5px 0 10px 0 ;
+}
+#device_name{
+  font-size:18px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 5px 0 5px 0;
+}
+
+#uuid_name{
+	font-size:18px;
+  font-weight: 300;
+  margin: 5px 0 5px 0;
+}
+
+#status{
+	color:#448aff;
+	font-size:14px;
+  font-weight: 300;
+}
+
+.meter{
+  float: left;
+  width: 130px;
+  border-width: 0px;
+  border-color: #fff;
+  border-style: solid;
+  position: relative;
+}
+
+.shift{
+  display: inline-block;
+  width: 130px;
+  height: 80px;
+  background-color: #111;
+  position: relative;
+}
+
+#data_shift{
+  font-size: 60px;
+  position: absolute;
+  bottom:5px;
+  right: 45px;
+  font-weight: 900;
+}
+
+.rpm{
+  display: inline-block;
+  width: 130px;
+  height: 80px;
+  background-color: #111;
+  padding-right: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+#data_rpm{
+  font-size: 40px;
+  position: absolute;
+  bottom:25px;
+  right: 10px;
+}
+
+#unit_rpm{
+  font-size: 15px;
+  position: absolute;
+  bottom:5px;
+  right: 5px;
+}
+
+#speed{
+  float: left;
+  width: 240px;
+  height: 163px;
+  margin-left: 5px;
+  text-align: right;
+  background-color: #111;
+  position: absolute;
+  color: #888;
+  text-shadow: 1px 2px 5px #808080;
+}
+
+#data_speedH{
+  font-size: 125px;
+  position: absolute;
+  bottom:30px;
+  right: 50px;
+  font-weight: 900;
+}
+#data_speedL{
+  font-size: 50px;
+  position: absolute;
+  bottom:46px;
+  right: 2px;
+  font-weight: 900;
+}
+#unit_speed{
+  font-size: 30px;
+  position: absolute;
+  bottom:5px;
+  right: 15px;
+}
+
+.time{
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  bottom:0px;
+  left: 0px;
+  padding: 0px 5px 1px 5px;
+  border-width: 4px 4px 0 0;
+  border-color: #333;
+  border-style: solid;
+  color: #FFF;
+  background-color: #111;
+
+}
+
+#timeH{
+  display: inline-block;
+}
+#timeS{
+  display: inline-block;
+  margin: 0 -10px;
+}
+#timeM{
+  display: inline-block;
+}
+
+.data{
+  display: inline-block;
+  width: 380px;
+  height: 25px;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+}
+
+#data_temp{
+  display: inline;
+}
+#data_batt{
+  display: inline;
+}
+#data_mode{
+  display: inline;
+}
+
+
+a { text-decoration: none; }
+a:link { color: #9a9a9a; }
+a:visited { color: #9a9a9a; }
