@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html, body {
 	font-family: 'Oswald', sans-serif;
-	min-width: 400px;
+	min-width: 380px;
   background-color: #000;
 }
 
@@ -32,7 +32,7 @@ hr{
 
 .container{
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   background-color: #333;
   color: #ffffff;
 }
@@ -44,12 +44,12 @@ hr{
 }
 
 .contents{
-  padding: 10px 0px 100px 0px;
+  padding: 0px 0px 100px 0px;
 }
 
 .margin{
-  border-left:  5px;
-  border-right: 5px;
+  border-left:  0px;
+  border-right: 0px;
   border-style: solid;
   box-sizing: border-box;
   border-color: rgba(0, 0, 0, 0);
