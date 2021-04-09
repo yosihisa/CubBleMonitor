@@ -32,7 +32,7 @@ hr{
 
 .container{
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   background-color: #333;
   color: #ffffff;
 }
@@ -48,8 +48,8 @@ hr{
 }
 
 .margin{
-  border-left:  20px;
-  border-right: 20px;
+  border-left:  5px;
+  border-right: 5px;
   border-style: solid;
   box-sizing: border-box;
   border-color: rgba(0, 0, 0, 0);
