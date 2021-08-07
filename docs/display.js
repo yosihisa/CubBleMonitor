@@ -2,7 +2,7 @@ var Rpm ;
 var Shift;
 var Temp;
 var Batt = 0;
-var Speed;
+var Speed = 0;
 var Mode;
 
 var count = 0;
@@ -11,13 +11,15 @@ var cv;
 var id;
 var canvas
 
+var kb = 0.60;
+var ks = 0.85;
 
 updateParam = function (rpm, shift, temp, batt, speed, mode) {
     Rpm = parseInt(rpm,10);
     Shift = shift;
     Temp = temp;
-    Batt = batt;
-    Speed = speed;
+    Batt = kb * batt + (1 - kb) * Batt;
+    Speed = ks * speed + (1 - ks) * Speed;
     Mode = mode;
 
     count = count + 1;
