@@ -91,7 +91,7 @@ function ndraw() {
 
     //速度
     speedH = (Speed / 10).toFixed(0);
-    speedL = (Speed % 10).toFixed(0);
+    speedL = (Speed.toFixed(0) % 10);
     cv.fillStyle = "#FFF"
     cv.font = 'bold 120pt Oswald';
     cv.textAlign ='end'
