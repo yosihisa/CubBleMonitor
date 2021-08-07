@@ -11,8 +11,8 @@ var cv;
 var id;
 var canvas
 
-var kb = 0.20;
-var ks = 0.60;
+var kb = 0.10;
+var ks = 0.40;
 
 updateParam = function (rpm, shift, temp, batt, speed, mode) {
     Rpm = parseInt(rpm,10);
