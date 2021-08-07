@@ -11,8 +11,8 @@ var cv;
 var id;
 var canvas
 
-var kb = 0.60;
-var ks = 0.85;
+var kb = 0.20;
+var ks = 0.60;
 
 updateParam = function (rpm, shift, temp, batt, speed, mode) {
     Rpm = parseInt(rpm,10);
@@ -91,7 +91,7 @@ function ndraw() {
 
     //速度
     speedH = (Speed / 10).toFixed(0);
-    speedL = Speed % 10;
+    speedL = (Speed % 10).toFixed(0);
     cv.fillStyle = "#FFF"
     cv.font = 'bold 120pt Oswald';
     cv.textAlign ='end'
