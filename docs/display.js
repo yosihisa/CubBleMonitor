@@ -56,7 +56,7 @@ function ndraw() {
     cv.fill();
 
     if (Rpm > 2300) {
-        cv.fillStyle = "#0F0";
+        cv.fillStyle = "#1E1";
         cv.beginPath();
         cv.arc(190, 200, 300, (-1 + (2300 / MAX_RPM)) * (3.1415), (-1 + (Rpm / MAX_RPM)) * (3.1415), false);
         cv.lineTo(190, 200);
@@ -65,9 +65,18 @@ function ndraw() {
     }
 
     if (Rpm > 5300) {
-        cv.fillStyle = "#FF0";
+        cv.fillStyle = "#0AF";
         cv.beginPath();
         cv.arc(190, 200, 300, (-1 + (5300 / MAX_RPM)) * (3.1415), (-1 + (Rpm / MAX_RPM)) * (3.1415), false);
+        cv.lineTo(190, 200);
+        cv.closePath();
+        cv.fill();
+    }
+
+    if (Rpm > 7500) {
+        cv.fillStyle = "#FF0";
+        cv.beginPath();
+        cv.arc(190, 200, 300, (-1 + (7500 / MAX_RPM)) * (3.1415), (-1 + (Rpm / MAX_RPM)) * (3.1415), false);
         cv.lineTo(190, 200);
         cv.closePath();
         cv.fill();
@@ -81,6 +90,14 @@ function ndraw() {
         cv.closePath();
         cv.fill();
     }
+
+    //アイドリング範囲
+    cv.fillStyle = "rgba(" + [255, 255, 255, 0.5] + ")";
+    cv.beginPath();
+    cv.arc(190, 200, 300, (-1 + (1300 / MAX_RPM)) * (3.1415), (-1 + (1500 / MAX_RPM)) * (3.1415), false);
+    cv.lineTo(190, 200);
+    cv.closePath();
+    cv.fill();
 
     //タコメーターカバー
     cv.fillStyle = "#111"
