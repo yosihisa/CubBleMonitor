@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html, body {
 	font-family: 'Oswald', sans-serif;
-	min-width: 380px;
+	/*min-width: 380px;*/
   background-color: #000;
 }
 
