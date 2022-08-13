@@ -1,5 +1,5 @@
 // キャッシュファイルの指定
-var CACHE_NAME = 'cbm-pwa-caches';
+var CACHE_NAME = 'cbm-pwa-caches-v1';
 const urlsToCache = [
     './',
     './index.html',
