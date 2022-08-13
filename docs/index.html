@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Cub Ble Monitor</title>
   <meta name="viewport" content="width=380,user-scalable=no">
+  <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="bluejelly.js"></script>
   <script type="text/javascript" src="display.js"></script>
@@ -33,6 +34,17 @@
   </div>
   <script type="text/javascript">Start_drawing();</script>
   <script type="text/javascript" src="BLE.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service_worker.js').then(registration => {
+        console.log('ServiceWorker registration successful.');
+      }).catch(err => {
+        console.log('ServiceWorker registration failed.');
+      });
+    }
+  </script>
+  
 </body>
 
 </html>
